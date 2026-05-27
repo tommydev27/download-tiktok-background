@@ -6,20 +6,19 @@
     <title>Tommy Video & MP3 Downloader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
-    <style>
- 
-        body { background: rgb(242, 242, 242); color: #475569; font-family: sans-serif; margin:0; padding: 0; width: 100%; }
-        
-        .container { padding: 2vw;  }
-        
-        .card { text-align: center; border-radius: 20px;
-          background: rgb(242, 242, 242); box-shadow: 2px 2px 5px #4b60523d, -8px -8px 6px #dddddd87; padding: 10px;
+<style>
+        :root {
+            --gold-primary: #b58b3c;
+            --gold-dark: #8a6d3b;
+            --bg-dark: #181818;
         }
+        body { background: var(--bg-dark); color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; margin: 0; padding:10px;}
+        .card { padding: 0; border-radius: 20px; width: 100%; text-align: center; }
         
         .footer-wrapper {
             display: flex;
-            background: rgb(242, 242, 242);
-            box-shadow: 2px 2px 5px #4b60523d, -8px -8px 6px #dddddd87;
+            background: #181818;
+            box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
             padding: 2vw;
             border-radius: 3vw;
             align-items: stretch;
@@ -32,8 +31,8 @@
         }
 
         .thumb-container {
-            width: 110%; 
-            background: rgb(242, 242, 242);
+            width: 100%; 
+            background: #0f172a;
             border-radius: 2vw;
             overflow: hidden;
             display: block;
@@ -51,7 +50,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-left: 7vw;
+            padding-left: 15px;
             box-sizing: border-box;
             text-align: left;
             position: relative;
@@ -59,7 +58,7 @@
 
         .video-title-box {
             font-size: 3vw;
-            color: #475569;
+            color: #0cb8fb;
             font-weight: bold;
             line-height: 1.3;
             word-break: break-word;
@@ -75,9 +74,9 @@
             height: 6vw;
             border: 1vw solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            border-top-color: #475569;
+            border-top-color: #0092c9;
             animation: spin 1s linear infinite;
-            margin-top: 2vw;
+            margin-top: 10px;
         }
 
         @keyframes spin {
@@ -85,35 +84,36 @@
             100% { transform: rotate(360deg); }
         }
 
-        input { width: 100%; padding: 2.5vw; border-radius: 50px;
-        border: 0.2vw solid #00ce00;  background: rgb(242, 242, 242);  margin-top: 15px; margin-bottom: 15px; box-sizing: border-box; outline: none; font-size:3.5vw;
-        box-shadow: 2px 2px 5px #4b60523d, -8px -8px 6px #dddddd87;
+        input { width: 100%; padding: 8px 20px; border-radius: 50px;
+        border: 0.2vw solid #444;  background: #181818;  margin-top: 15px; margin-bottom: 15px; box-sizing: border-box; outline: none; font-size:14px;
+        box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
         font-weight:700;}
         
         input:focus { border-color:
-       #475569; }
+        #0092c9; }
         
         button {
             width: 100%;
-            padding: 2.8vw;
+            padding: 8px;
             border: none;
             border-radius: 50px;
-            background:   #475569;
-            color: #fff;
-            box-shadow: 2px 2px 5px #4b60523d, -8px -8px 6px #dddddd87;
+            background: #181818;
+            border: 0.2vw solid #444;
+            color: #0092c9;
+            box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
             font-weight: bold;
-            font-size: 3.5vw;
+            font-size: 14px;
             cursor: pointer;
         }
         
         .dl-group { display: flex; gap: 8px; flex-direction: column; width: 100%; }
-        .dl-btn { width: 100%; background: #475569; padding: 10px; text-decoration: none; border-radius: 50px; font-weight: bold; cursor: pointer; border: none; font-size: 3vw; display: flex; align-items: center; justify-content: center; gap: 5px;}
+        .dl-btn { width: 100%; background: var(--gold-primary); color: white; padding: 10px; text-decoration: none; border-radius: 50px; font-weight: bold; cursor: pointer; border: none; font-size: 3vw; display: flex; align-items: center; justify-content: center; gap: 5px;}
         .dl-btn.mp3 { background: #00653e }
 
-        .notch { height: 35px; display: flex; justify-content: left; align-items: center; color: #0092c9; font-size: 14px; font-weight: 700; box-shadow: 2px 2px 5px #4b60523d, -8px -8px 6px #dddddd87; margin-bottom: 15px;}
+        .notch { height: 35px; display: flex; justify-content: left; align-items: center; color: #0092c9; font-size: 14px; font-weight: 700; box-shadow: 0 5px 10px rgba(0,0,0,0.5); margin-bottom: 15px;}
         
         input::placeholder {
-          color: #475569;
+          color: #00ce00;
           opacity: 1; 
           
     </style>

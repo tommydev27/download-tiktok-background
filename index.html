@@ -10,17 +10,16 @@
         :root {
             --gold-primary: #b58b3c;
             --gold-dark: #8a6d3b;
-            --bg-dark: #181818;
+            --bg-dark: rgb(242, 242, 242);
         }
-        body { background: var(--bg-dark); color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; margin: 0; padding:10px;}
+        body { color: #555; font-family: sans-serif; display: flex; justify-content: center; align-items: center; margin: 0; padding:10px;}
         .card { padding: 0; border-radius: 20px; width: 100%; text-align: center; }
         
         .footer-wrapper {
             display: flex;
-            background: #181818;
-            box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
+            border: 0.5vw solid #06b6d4;
             padding: 2vw;
-            border-radius: 3vw;
+            border-radius: 4vw;
             align-items: stretch;
             box-sizing: border-box;
             width: 100%;
@@ -32,7 +31,7 @@
 
         .thumb-container {
             width: 100%; 
-            background: #0f172a;
+            padding: 4px;
             border-radius: 2vw;
             overflow: hidden;
             display: block;
@@ -41,7 +40,9 @@
         .thumbnail { 
             width: 100%; 
             height: auto; 
+            border: 0.2vw solid #0092c9;
             object-fit: cover; 
+            border-radius: 4vw;
             display: block; 
         }
 
@@ -50,15 +51,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-left: 15px;
+            padding-left: 20px;
             box-sizing: border-box;
             text-align: left;
             position: relative;
         }
 
         .video-title-box {
-            font-size: 3vw;
-            color: #0cb8fb;
+            font-size: 4vw;
+            color: #555;
             font-weight: bold;
             line-height: 1.3;
             word-break: break-word;
@@ -85,8 +86,7 @@
         }
 
         input { width: 100%; padding: 8px 20px; border-radius: 50px;
-        border: 0.2vw solid #444;  background: #181818;  margin-top: 15px; margin-bottom: 15px; box-sizing: border-box; outline: none; font-size:14px;
-        box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
+        border: 0.5vw solid #06b6d4;   margin-top: 15px; margin-bottom: 15px; box-sizing: border-box; outline: none; font-size:14px;
         font-weight:700;}
         
         input:focus { border-color:
@@ -95,12 +95,9 @@
         button {
             width: 100%;
             padding: 8px;
-            border: none;
             border-radius: 50px;
-            background: #181818;
-            border: 0.2vw solid #444;
-            color: #0092c9;
-            box-shadow: 0.8vw 0.8vw 2vw rgba(0,0,0,0.917), -0.1vw -0.1vw 1vw rgba(255,255,255,0.206);
+            border: 0.5vw solid #06b6d4;
+            color: #555;
             font-weight: bold;
             font-size: 14px;
             cursor: pointer;
@@ -113,7 +110,7 @@
         .notch { height: 35px; display: flex; justify-content: left; align-items: center; color: #0092c9; font-size: 14px; font-weight: 700; box-shadow: 0 5px 10px rgba(0,0,0,0.5); margin-bottom: 15px;}
         
         input::placeholder {
-          color: #00ce00;
+          color: #555;
           opacity: 1; 
           
     </style>
@@ -125,13 +122,13 @@
     <div class="footer-wrapper">
         <div class="thumb-column">
             <div class="thumb-container">
-                <img id="videoThumb" class="thumbnail" src="https://i.postimg.cc/nVkfr6fd/6c9c471f41d4a6b20a6d7c68ff27ee01-2.jpg" alt="Thumbnail">
+                <img id="videoThumb" class="thumbnail" src="https://i.postimg.cc/pXxQXHKy/076982fbafb80f85be4ec3a93716f2f6.jpg" alt="Thumbnail">
             </div>
         </div>
 
         <div class="result-column">
             <div>
-                <div id="videoTitle" class="video-title-box">Tiktok Download Vidio | MP3 </div>
+                <div id="videoTitle" class="video-title-box">Tiktok Download <br>Vidio | MP3 </div>
                 <div id="loadingSpinner" class="spinner"></div>
             </div>
             
